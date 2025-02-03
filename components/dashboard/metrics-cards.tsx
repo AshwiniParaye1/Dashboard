@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function MetricsCards() {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 ml-14">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <Card className="bg-white">
         <CardContent className="p-6">
           <div className="flex justify-between items-center mb-4">

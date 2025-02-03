@@ -7,7 +7,7 @@ import { PiSidebarLight } from "react-icons/pi";
 
 export function DashboardHeader() {
   return (
-    <div className="sticky top-0 z-50 flex h-[75px] pl-20 pr-8 items-center justify-between bg-[#6366F1] px-4">
+    <div className="sticky top-0 z-50 flex h-[75px] pr-8 items-center justify-between bg-[#6366F1] px-4">
       <div className="flex items-center gap-4">
         <button className="text-white p-2 hover:bg-white/10 rounded-lg">
           <PiSidebarLight size={24} />

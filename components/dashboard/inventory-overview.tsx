@@ -16,7 +16,7 @@ const data = [
 
 export function InventoryOverview() {
   return (
-    <Card className="bg-white ml-14">
+    <Card className="bg-white">
       <CardContent className="p-6">
         <div className="flex flex-col space-y-4">
           <div className="flex items-start justify-between">

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface TopItemsProps {
@@ -25,7 +25,7 @@ export function TopItems({ title, type }: TopItemsProps) {
         ];
 
   return (
-    <Card>
+    <div className="h-full">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-base font-semibold">{title}</CardTitle>
         <div className="flex gap-2">
@@ -53,6 +53,6 @@ export function TopItems({ title, type }: TopItemsProps) {
           ))}
         </div>
       </CardContent>
-    </Card>
+    </div>
   );
 }
