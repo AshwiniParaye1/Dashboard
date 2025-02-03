@@ -26,18 +26,20 @@ export function TopItems({ title, type }: TopItemsProps) {
 
   return (
     <Card>
-      <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>{title}</CardTitle>
+      <CardHeader className="flex flex-row items-center justify-between pb-2">
+        <CardTitle className="text-base font-semibold">{title}</CardTitle>
         <div className="flex gap-2">
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" className="h-8 text-xs">
             VOL.
           </Button>
-          <Button variant="default" size="sm">
+          <Button
+            size="sm"
+            className="h-8 text-xs bg-[#6366F1] hover:bg-[#5355E2]"
+          >
             VALUE
           </Button>
         </div>
       </CardHeader>
-
       <CardContent>
         <div className="space-y-4">
           {items.map((item) => (
