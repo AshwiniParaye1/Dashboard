@@ -16,19 +16,21 @@ export function WelcomeSection() {
           />
         </div>
         <div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-6">
             <h1 className="text-xl font-semibold">Hello, Rahul</h1>
-            <span className="px-2 py-0.5 text-xs font-medium text-white bg-[#6366F1] rounded">
+            <span className="pl-4 pr-4 pt-2 pb-2 text-xs font-semibold text-white bg-[#4F45E4] rounded-lg">
               CUSTOMER
             </span>
           </div>
-          <p className="text-sm text-gray-500">ORUE PVT. LTD.</p>
+          <p className="text-sm font-extralight text-gray-600">
+            ORUE PVT. LTD.
+          </p>
         </div>
       </div>
       <Button
         variant="outline"
         size="sm"
-        className="h-8 text-xs bg-white hover:bg-gray-50"
+        className="h-8 text-xs bg-white  text-gray-500 font-bold"
       >
         LAST 30 DAYS
         <ChevronDown className="ml-1 h-4 w-4" />
