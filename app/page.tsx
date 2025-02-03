@@ -1,3 +1,5 @@
+"use client";
+
 import { DashboardHeader } from "@/components/dashboard/header";
 import { DashboardSidebar } from "@/components/dashboard/sidebar";
 import { WelcomeSection } from "@/components/dashboard/welcome-section";
@@ -12,12 +14,16 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-gray-50 ml-[60px]">
       <DashboardHeader />
       <DashboardSidebar />
-      <main className=" p-6 space-y-6 ">
+      <main className="p-6 space-y-6">
         <WelcomeSection />
         <MetricsCards />
-        <div className="grid lg:grid-cols-2 gap-6">
-          <InventoryOverview />
-          <ShipmentAnalytics />
+        <div className="flex gap-6">
+          <div className="w-[35%]">
+            <InventoryOverview />
+          </div>
+          <div className="w-[65%]">
+            <ShipmentAnalytics />
+          </div>
         </div>
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="flex">
