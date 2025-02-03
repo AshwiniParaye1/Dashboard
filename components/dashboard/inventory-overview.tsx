@@ -44,7 +44,7 @@ export function InventoryOverview() {
               {/* </button> */}
             </div>
           </div>
-          <div className="h-[240px] mt-4">
+          <div className="h-[286px] mt-4">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data}>
                 <XAxis

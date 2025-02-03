@@ -4,15 +4,15 @@ import { SlidersHorizontal, Truck } from "lucide-react";
 
 export function ShipmentAnalytics() {
   return (
-    <Card className="w-full">
+    <Card className="w-full h-full">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle>Shipment Analytics</CardTitle>
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm">
+        <CardTitle className="text-base">Shipment Analytics</CardTitle>
+        <div className="flex gap-8 justify-center items-center">
+          <Button variant="outline" size="sm" className="">
             <SlidersHorizontal className="h-4 w-4 mr-2" />
             FILTERS
           </Button>
-          <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-md">
+          <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-md mr-72">
             <span className="text-sm">ID:</span>
             <span className="text-sm font-medium">#003455MNP</span>
           </div>
@@ -50,12 +50,34 @@ export function ShipmentAnalytics() {
               </div>
             </div>
           </div>
-          <div className="w-96">
+          <div className="w-[55%]">
             <img
               src="/shipment-analytics.png"
               alt="Shipment Analysis"
               className="w-full h-full object-cover rounded-lg"
             />
+            <div className="flex flex-row gap-6 text-xs pt-4 pb-4 justify-center items-center ">
+              <div className="border-r border-gray-200">
+                <p className="">Shipment ID</p>
+                <p>#0124BCD</p>
+              </div>
+              <div className="border-r border-gray-200">
+                <p className="">Category</p>
+                <p>Electronics</p>
+              </div>
+              <div className=" border-r border-gray-200">
+                <p>Total Weight</p>
+                <p>329 g</p>
+              </div>
+              <div className=" border-r border-gray-200">
+                <p>Destination</p>
+                <p>Bangalore</p>
+              </div>
+              <div>
+                <p>Est. Arrival</p>
+                <p>2 Hrs</p>
+              </div>
+            </div>
           </div>
         </div>
       </CardContent>
