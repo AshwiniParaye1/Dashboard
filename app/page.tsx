@@ -30,11 +30,11 @@ export default function DashboardPage() {
             <div className="w-1/2 border-r border-gray-200">
               <Spotlight />
             </div>
-            <div className="w-1/2 flex flex-col">
+            <div className="w-1/2 flex flex-row">
               <div className="flex-1 border-b border-gray-200">
                 <TopItems title="Top Items Sold" type="sold" />
               </div>
-              <div className="flex-1">
+              <div className="flex-1 border-l border-gray-200">
                 <TopItems title="Top Items Purchased" type="purchased" />
               </div>
             </div>
