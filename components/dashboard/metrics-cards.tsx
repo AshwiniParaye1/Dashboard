@@ -1,19 +1,20 @@
-import {
-  ArrowUpRight,
-  CreditCard,
-  ShoppingCart,
-  TrendingUp
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { TbMoneybag } from "react-icons/tb";
+import { TbCash } from "react-icons/tb";
+import { BsCartPlus } from "react-icons/bs";
+import { FaChartLine } from "react-icons/fa";
 
 export function MetricsCards() {
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <Card className="bg-white">
-        <CardContent className="p-6">
+        <CardContent className="pl-4 pt-2">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-500 text-sm">Payment Receivables</span>
-            <CreditCard className="h-5 w-5 text-gray-500" />
+            <span className="text-gray-500 text-base font-extralight">
+              Payment Receivables
+            </span>
+            <TbMoneybag className="h-8 w-8 rounded-lg text-[#05BF8F] bg-[#05BF8F1A] p-1.5 mt-2" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -31,10 +32,12 @@ export function MetricsCards() {
       </Card>
 
       <Card className="bg-white">
-        <CardContent className="p-6">
+        <CardContent className="pl-4 pt-2">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-500 text-sm">Payments Made</span>
-            <CreditCard className="h-5 w-5 text-gray-500" />
+            <span className="text-gray-500 text-base font-extralight">
+              Payments Made
+            </span>
+            <TbCash className="h-8 w-8 rounded-lg mt-2 p-1 bg-[#4F45E41A] text-[#0064BE]" />
           </div>
           <div className="space-y-2">
             <span className="text-2xl font-bold text-[#6366F1]">₹9,50,000</span>
@@ -44,10 +47,12 @@ export function MetricsCards() {
       </Card>
 
       <Card className="bg-white">
-        <CardContent className="p-6">
+        <CardContent className="pl-4 pt-2">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-500 text-sm">Total Purchases</span>
-            <ShoppingCart className="h-5 w-5 text-gray-500" />
+            <span className="text-gray-500 text-base font-extralight">
+              Total Purchases
+            </span>
+            <BsCartPlus className="h-8 w-8 bg-[#FF900D1A] rounded-lg p-1.5 mt-2 text-[#FF900D]" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -65,10 +70,12 @@ export function MetricsCards() {
       </Card>
 
       <Card className="bg-white">
-        <CardContent className="p-6">
+        <CardContent className="pl-4 pt-2">
           <div className="flex justify-between items-center mb-4">
-            <span className="text-gray-500 text-sm">Total Sales</span>
-            <TrendingUp className="h-5 w-5 text-gray-500" />
+            <span className="text-gray-500 text-base font-extralight">
+              Total Sales
+            </span>
+            <FaChartLine className="h-8 w-8 p-2 rounded-lg bg-[#7A21EB1A] text-[#7A21EB] mt-2" />
           </div>
           <div className="space-y-2">
             <div className="flex items-center justify-between">
