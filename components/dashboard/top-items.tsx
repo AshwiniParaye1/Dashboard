@@ -26,27 +26,56 @@ export function TopItems({ title, type }: TopItemsProps) {
 
   return (
     <div className="h-full">
-      <CardHeader className="flex flex-row items-center justify-between pb-2">
+      <CardHeader className="flex flex-row items-center justify-between p-4">
         <CardTitle className="text-base font-semibold">{title}</CardTitle>
-        <div className="flex gap-2">
-          <Button variant="outline" size="sm" className="h-8 text-xs">
-            VOL.
-          </Button>
-          <Button
-            size="sm"
-            className="h-8 text-xs bg-[#6366F1] hover:bg-[#5355E2]"
-          >
-            VALUE
-          </Button>
+        <div className="flex gap-1">
+          {type === "sold" ? (
+            <>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-7 px-3 py-1.5 text-xs font-medium bg-gray-50 hover:bg-gray-100"
+              >
+                VALUE
+              </Button>
+              <Button
+                size="sm"
+                className="h-7 px-3 py-1.5 text-xs font-medium bg-[#6366F1] hover:bg-[#5355E2] text-white"
+              >
+                VOL.
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-7 px-3 py-1.5 text-xs font-medium bg-gray-50 hover:bg-gray-100"
+              >
+                VOL.
+              </Button>
+              <Button
+                size="sm"
+                className="h-7 px-3 py-1.5 text-xs font-medium bg-[#6366F1] hover:bg-[#5355E2] text-white"
+              >
+                VALUE
+              </Button>
+            </>
+          )}
         </div>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {items.map((item) => (
-            <div key={item.rank} className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
+      <CardContent className="p-4">
+        <div className="space-y-2">
+          {items.map((item, index) => (
+            <div
+              key={item.rank}
+              className={`flex items-center justify-between p-2 rounded-md ${
+                index % 2 === 0 ? "bg-gray-50" : ""
+              }`}
+            >
+              <div className="flex items-center gap-3">
                 <span className="text-sm font-medium">#{item.rank}</span>
-                <span className="text-sm">{item.name}</span>
+                <span className="text-sm text-gray-600">{item.name}</span>
               </div>
               <span className="text-sm font-medium">{item.value}</span>
             </div>
