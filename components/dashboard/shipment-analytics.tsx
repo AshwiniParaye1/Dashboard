@@ -7,7 +7,7 @@ export function ShipmentAnalytics() {
   return (
     <Card className="w-full h-full">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="text-base font-bold">
+        <CardTitle className="text-base font-semibold">
           Shipment Analytics
         </CardTitle>
         <div className="flex gap-8 justify-center items-center text-xs">
