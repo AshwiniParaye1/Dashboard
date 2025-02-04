@@ -2,49 +2,50 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  // Box,
-  LayoutDashboard,
-  FileText,
-  Settings,
-  HelpCircle,
-  BarChart2,
-  ShoppingBag,
-  Package,
-  Image as ImageIcon
-} from "lucide-react";
+import { Settings, HelpCircle, ShoppingBag } from "lucide-react";
 import Image from "next/image";
+import { GoPackage } from "react-icons/go";
+import { RiContactsBook2Line } from "react-icons/ri";
+import { TbNotes } from "react-icons/tb";
+import { BiVector } from "react-icons/bi";
+import { LuScrollText } from "react-icons/lu";
+import { TbBasketCode } from "react-icons/tb";
 
 const menuItems = [
   {
-    icon: LayoutDashboard,
+    icon: GoPackage,
     href: "/dashboard",
     label: "Dashboard"
   },
   {
-    icon: FileText,
+    icon: RiContactsBook2Line,
     href: "/dashboard/documents",
     label: "Documents"
   },
   {
-    icon: Package,
+    icon: TbNotes,
     href: "/dashboard/inventory",
     label: "Inventory"
   },
   {
-    icon: BarChart2,
+    icon: BiVector,
     href: "/dashboard/analytics",
     label: "Analytics"
   },
   {
-    icon: ShoppingBag,
+    icon: LuScrollText,
     href: "/dashboard/orders",
     label: "Orders"
   },
   {
-    icon: ImageIcon,
+    icon: ShoppingBag,
     href: "/dashboard/media",
     label: "Media"
+  },
+  {
+    icon: TbBasketCode,
+    href: "/dashboard/code",
+    label: "Code"
   }
 ];
 
@@ -60,7 +61,7 @@ export function DashboardSidebar() {
           </div>
         </Link>
       </div>
-      <div className="flex-1 flex flex-col gap-1 p-2 pt-4">
+      <div className="flex-1 flex flex-col gap-4 p-2 pt-4">
         {menuItems.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -70,30 +71,31 @@ export function DashboardSidebar() {
               className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors
                 ${
                   isActive
-                    ? "bg-[#6366F1] text-white"
+                    ? "bg-[#4F45E4] text-white "
                     : "text-gray-500 hover:bg-gray-100"
                 }
               `}
               title={item.label}
             >
-              <item.icon className="h-5 w-5" />
+              <item.icon className="h-6 w-6" />
               <span className="sr-only">{item.label}</span>
             </Link>
           );
         })}
       </div>
-      <div className="p-2 flex flex-col gap-1">
+      <div className="p-2 flex flex-col gap-2">
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100"
+          className="flex h-10 w-10 items-center justify-center rounded-lg"
           title="Help"
         >
-          <HelpCircle className="h-5 w-5" />
+          <HelpCircle className="h-6 w-6" />
         </button>
+        <div className="border-t-2"></div>
         <button
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100"
+          className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-10 mb-4"
           title="Settings"
         >
-          <Settings className="h-5 w-5" />
+          <Settings className="h-6 w-6" />
         </button>
       </div>
     </div>
