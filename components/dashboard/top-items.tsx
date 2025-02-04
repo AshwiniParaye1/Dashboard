@@ -30,37 +30,37 @@ export function TopItems({ title, type }: TopItemsProps) {
         <CardTitle className="text-base font-semibold">{title}</CardTitle>
         <div className="flex gap-1">
           {type === "sold" ? (
-            <>
+            <div className="rounded-3xl bg-[#F7F9FB] p-1 border border-neutral-200">
               <Button
                 variant="ghost"
                 size="sm"
-                className="h-7 px-3 py-1.5 text-xs font-medium bg-gray-50 hover:bg-gray-100"
+                className="h-7 py-2 text-[9.17px] font-bold text-gray-500"
               >
                 VALUE
               </Button>
               <Button
                 size="sm"
-                className="h-7 px-3 py-1.5 text-xs font-medium bg-[#6366F1] hover:bg-[#5355E2] text-white"
+                className="h-7 w-16 px-3 py-2 text-[9.17px] font-bold rounded-3xl bg-[#4F45E4] hover:bg-[#5355E2] text-white"
               >
                 VOL.
               </Button>
-            </>
+            </div>
           ) : (
-            <>
+            <div className="rounded-3xl bg-[#F7F9FB] p-1 border border-neutral-200">
               <Button
                 variant="ghost"
                 size="sm"
-                className="h-7 px-3 py-1.5 text-xs font-medium bg-gray-50 hover:bg-gray-100"
+                className="h-7 py-2 text-[9.17px] font-bold text-gray-500"
               >
                 VOL.
               </Button>
               <Button
                 size="sm"
-                className="h-7 px-3 py-1.5 text-xs font-medium bg-[#6366F1] hover:bg-[#5355E2] text-white"
+                className="h-7 w-16 px-3 py-2 text-[9.17px] font-bold rounded-3xl bg-[#4F45E4] hover:bg-[#5355E2] text-white"
               >
                 VALUE
               </Button>
-            </>
+            </div>
           )}
         </div>
       </CardHeader>
@@ -77,7 +77,9 @@ export function TopItems({ title, type }: TopItemsProps) {
                 <span className="text-sm font-medium">#{item.rank}</span>
                 <span className="text-sm text-gray-600">{item.name}</span>
               </div>
-              <span className="text-sm font-medium">{item.value}</span>
+              <span className="text-sm  border border-neutral-200 pl-2 pr-2 pt-1 pb-1 rounded-lg font-medium">
+                {item.value}
+              </span>
             </div>
           ))}
         </div>
