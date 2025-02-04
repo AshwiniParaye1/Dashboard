@@ -70,14 +70,22 @@ export function TopItems({ title, type }: TopItemsProps) {
             <div
               key={item.rank}
               className={`flex items-center justify-between p-2 rounded-md ${
-                index % 2 === 0 ? "bg-gray-50" : ""
+                type === "sold" || (type === "purchased" && index !== 1)
+                  ? "bg-gray-50"
+                  : "invisible"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="text-sm font-medium">#{item.rank}</span>
-                <span className="text-sm text-gray-600">{item.name}</span>
+                <span className="text-sm font-bold">#{item.rank}</span>
+                <span className="text-sm font-light">{item.name}</span>
               </div>
-              <span className="text-sm  border border-neutral-200 pl-2 pr-2 pt-1 pb-1 rounded-lg font-medium">
+              <span
+                className={`text-sm pl-2 pr-2 pt-1 pb-1 rounded-lg font-medium ${
+                  type === "sold"
+                    ? "border border-neutral-200"
+                    : " border border-transparent"
+                }`}
+              >
                 {item.value}
               </span>
             </div>
