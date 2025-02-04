@@ -34,7 +34,7 @@ export function Spotlight() {
           <Button
             variant="ghost"
             size="sm"
-            className="h-7 py-1.5 text-xs font-bold text-gray-500"
+            className="h-7 py-2 text-xs font-bold text-gray-500"
           >
             SUPPLIERS
           </Button>
