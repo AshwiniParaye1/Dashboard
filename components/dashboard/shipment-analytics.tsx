@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SlidersHorizontal, Truck } from "lucide-react";
@@ -8,7 +9,7 @@ export function ShipmentAnalytics() {
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="text-base">Shipment Analytics</CardTitle>
         <div className="flex gap-8 justify-center items-center">
-          <Button variant="outline" size="sm" className="">
+          <Button variant="outline" size="sm">
             <SlidersHorizontal className="h-4 w-4 mr-2" />
             FILTERS
           </Button>
@@ -51,25 +52,27 @@ export function ShipmentAnalytics() {
             </div>
           </div>
           <div className="w-[55%]">
-            <img
+            <Image
               src="/shipment-analytics.png"
               alt="Shipment Analysis"
+              width={500}
+              height={300}
               className="w-full h-full object-cover rounded-lg"
             />
-            <div className="flex flex-row gap-6 text-xs pt-4 pb-4 justify-center items-center ">
+            <div className="flex flex-row gap-6 text-xs pt-4 pb-4 justify-center items-center">
               <div className="border-r border-gray-200">
-                <p className="">Shipment ID</p>
+                <p>Shipment ID</p>
                 <p>#0124BCD</p>
               </div>
               <div className="border-r border-gray-200">
-                <p className="">Category</p>
+                <p>Category</p>
                 <p>Electronics</p>
               </div>
-              <div className=" border-r border-gray-200">
+              <div className="border-r border-gray-200">
                 <p>Total Weight</p>
                 <p>329 g</p>
               </div>
-              <div className=" border-r border-gray-200">
+              <div className="border-r border-gray-200">
                 <p>Destination</p>
                 <p>Bangalore</p>
               </div>
