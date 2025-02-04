@@ -22,12 +22,12 @@ export function InventoryOverview() {
           <div className="flex items-start justify-between">
             <div>
               <h2 className="text-base font-semibold">Inventory Overview</h2>
-              <p className="text-sm text-gray-500">
-                In-Stock Products: 3,200 Units
+              <p className="text-sm font-normal text-gray-500">
+                In-Stock Products:{" "}
+                <span className="font-semibold">3,200 Units</span>
               </p>
             </div>
-            <div className="flex gap-2 bg-gray-50 rounded-3xl h-12 items-center w-auto p-2">
-              {/* <button className="bg-gray-50 h-8 border-0 rounded-r-3xl"> */}
+            <div className="flex gap-2 border border-neutral-200 bg-gray-50 rounded-3xl h-10 items-center w-auto p-2">
               <Button
                 variant="ghost"
                 size="sm"
@@ -37,16 +37,33 @@ export function InventoryOverview() {
               </Button>
               <Button
                 size="sm"
-                className="h-8 text-xs bg-[#6366F1] hover:bg-[#5355E2] rounded-3xl"
+                className="h-8 text-xs bg-[#4F45E4] hover:bg-[#5355E2] rounded-3xl"
               >
                 WEEKLY
               </Button>
-              {/* </button> */}
             </div>
           </div>
           <div className="h-[286px] mt-4">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data}>
+                <YAxis
+                  stroke="#888888"
+                  fontSize={12}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={(value) => `${value}`}
+                  tick={{ display: "none" }}
+                  label={{
+                    value: "Total Items (in 1000s)",
+                    angle: -90,
+                    position: "insideLeft",
+                    style: {
+                      textAnchor: "middle",
+                      fill: "#888888",
+                      fontSize: 12
+                    }
+                  }}
+                />
                 <XAxis
                   dataKey="name"
                   stroke="#888888"
@@ -54,17 +71,20 @@ export function InventoryOverview() {
                   tickLine={false}
                   axisLine={false}
                 />
-                <YAxis
-                  stroke="#888888"
-                  fontSize={12}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(value) => `${value}`}
-                />
-                <Bar dataKey="sales" fill="#6366F1" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="purchases" fill="#E5E7EB" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="sales" fill="#4F45E4" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="purchases" fill="#D6D4F5" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
+          </div>
+          <div className="flex justify-end gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#4F45E4]" />
+              <span className="text-xs font-semibold">Sales</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#E5E7EB]" />
+              <span className="text-xs font-semibold">Purchases</span>
+            </div>
           </div>
         </div>
       </CardContent>
