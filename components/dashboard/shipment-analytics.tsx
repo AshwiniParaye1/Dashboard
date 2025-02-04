@@ -7,15 +7,21 @@ export function ShipmentAnalytics() {
   return (
     <Card className="w-full h-full">
       <CardHeader className="flex flex-row items-center justify-between">
-        <CardTitle className="text-base">Shipment Analytics</CardTitle>
-        <div className="flex gap-8 justify-center items-center">
-          <Button variant="outline" size="sm">
-            <SlidersHorizontal className="h-4 w-4 mr-2" />
+        <CardTitle className="text-base font-bold">
+          Shipment Analytics
+        </CardTitle>
+        <div className="flex gap-8 justify-center items-center text-xs">
+          <Button
+            variant="outline"
+            size="sm"
+            className="bg-[#F7F9FB] font-bold"
+          >
+            <SlidersHorizontal className="h-4 w-4 mr-2 font-bold" />
             FILTERS
           </Button>
-          <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-md mr-72">
-            <span className="text-sm">ID:</span>
-            <span className="text-sm font-medium">#003455MNP</span>
+          <div className="flex h-9 items-center gap-2 px-3 bg-gray-100 rounded-3xl mr-72">
+            <span className="text-sm font-normal text-gray-500">ID:</span>
+            <span className="text-sm font-bold text-gray-500">#003455MNP</span>
           </div>
         </div>
       </CardHeader>
