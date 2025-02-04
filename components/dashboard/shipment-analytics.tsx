@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { SlidersHorizontal, Truck } from "lucide-react";
+import { SlidersHorizontal } from "lucide-react";
 
 export function ShipmentAnalytics() {
   return (
@@ -28,8 +28,8 @@ export function ShipmentAnalytics() {
       <CardContent>
         <div className="flex gap-6">
           <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <Truck className="h-8 w-8 text-primary" />
+            <div className="flex items-center gap-4 pl-4 border rounded-lg">
+              {/* <Truck className="h-8 w-8 text-primary" /> */}
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-medium">#003455MNP</span>
@@ -41,9 +41,15 @@ export function ShipmentAnalytics() {
                   <span>15 Some Address</span>
                 </div>
               </div>
+              <Image
+                src={"/analytics.png"}
+                alt="Analytics Truck"
+                width={120}
+                height={80}
+              />
             </div>
-            <div className="flex items-center gap-4 p-4 border rounded-lg">
-              <Truck className="h-8 w-8 text-primary" />
+            <div className="flex items-center gap-4 pl-4 border rounded-lg">
+              {/* <Truck className="h-8 w-8 text-primary" /> */}
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-medium">#001432LDP</span>
@@ -55,6 +61,12 @@ export function ShipmentAnalytics() {
                   <span>15 Some Address</span>
                 </div>
               </div>
+              <Image
+                src={"/analytics.png"}
+                alt="Analytics Truck"
+                width={120}
+                height={80}
+              />
             </div>
           </div>
           <div className="w-[55%]">
