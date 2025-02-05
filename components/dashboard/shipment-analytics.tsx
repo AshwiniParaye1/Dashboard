@@ -28,16 +28,25 @@ export function ShipmentAnalytics() {
       <CardContent>
         <div className="flex gap-6">
           <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-4 pl-4 border rounded-lg">
+            <div className="flex items-center gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
               {/* <Truck className="h-8 w-8 text-primary" /> */}
               <div className="flex-1">
-                <div className="flex items-center justify-between">
-                  <span className="font-medium">#003455MNP</span>
-                  <span className="text-sm text-muted-foreground">83%</span>
+                <div className="flex flex-col">
+                  <span className="font-light text-xs text-gray-500">
+                    Shipment ID
+                  </span>
+                  <span className="font-bold text-base">#003455MNP</span>{" "}
+                  {/* <span className="text-sm text-muted-foreground">83%</span> */}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex flex-row gap-2 text-xs font-normal text-muted-foreground">
+                  <span>
+                    <div className="w-2 h-2 rounded-full bg-[#38C29B]" />
+                  </span>
                   <span>87 Some Address</span>
                   <span>→</span>
+                  <span>
+                    <div className="w-2 h-2 rounded-full bg-[#4F45E4]" />
+                  </span>
                   <span>15 Some Address</span>
                 </div>
               </div>
@@ -48,16 +57,25 @@ export function ShipmentAnalytics() {
                 height={80}
               />
             </div>
-            <div className="flex items-center gap-4 pl-4 border rounded-lg">
+            <div className="flex items-center gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
               {/* <Truck className="h-8 w-8 text-primary" /> */}
               <div className="flex-1">
-                <div className="flex items-center justify-between">
-                  <span className="font-medium">#001432LDP</span>
-                  <span className="text-sm text-muted-foreground">83%</span>
+                <div className="flex flex-col">
+                  <span className="font-light text-xs text-gray-500">
+                    Shipment ID
+                  </span>
+                  <span className="font-bold text-base">#001432LDP</span>
+                  {/* <span className="text-sm text-muted-foreground">83%</span> */}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="flex flex-row gap-2 text-xs font-normal text-muted-foreground">
+                  <span>
+                    <div className="w-2 h-2 rounded-full bg-[#38C29B]" />
+                  </span>
                   <span>87 Some Address</span>
                   <span>→</span>
+                  <span>
+                    <div className="w-2 h-2 rounded-full bg-[#4F45E4]" />
+                  </span>
                   <span>15 Some Address</span>
                 </div>
               </div>
