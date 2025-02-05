@@ -28,9 +28,9 @@ export function ShipmentAnalytics() {
       <CardContent>
         <div className="flex gap-6">
           <div className="flex-1 space-y-4">
-            <div className="flex items-center gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
+            <div className="flex gap-2 pl-4  rounded-lg bg-[#F7F9FB]">
               {/* <Truck className="h-8 w-8 text-primary" /> */}
-              <div className="flex-1">
+              <div className="flex pt-3 pb-3 flex-col justify-between">
                 <div className="flex flex-col">
                   <span className="font-light text-xs text-gray-500">
                     Shipment ID
@@ -40,12 +40,12 @@ export function ShipmentAnalytics() {
                 </div>
                 <div className="flex flex-row gap-2 text-xs font-normal text-muted-foreground">
                   <span>
-                    <div className="w-2 h-2 rounded-full bg-[#38C29B]" />
+                    <div className="w-2 h-2 mt-1 rounded-full bg-[#38C29B]" />
                   </span>
                   <span>87 Some Address</span>
                   <span>→</span>
                   <span>
-                    <div className="w-2 h-2 rounded-full bg-[#4F45E4]" />
+                    <div className="w-2 h-2 mt-1 rounded-full bg-[#4F45E4]" />
                   </span>
                   <span>15 Some Address</span>
                 </div>
@@ -57,9 +57,9 @@ export function ShipmentAnalytics() {
                 height={80}
               />
             </div>
-            <div className="flex items-center gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
+            <div className="flex gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
               {/* <Truck className="h-8 w-8 text-primary" /> */}
-              <div className="flex-1">
+              <div className="flex flex-col pt-3 pb-3 justify-between">
                 <div className="flex flex-col">
                   <span className="font-light text-xs text-gray-500">
                     Shipment ID
@@ -69,12 +69,12 @@ export function ShipmentAnalytics() {
                 </div>
                 <div className="flex flex-row gap-2 text-xs font-normal text-muted-foreground">
                   <span>
-                    <div className="w-2 h-2 rounded-full bg-[#38C29B]" />
+                    <div className="w-2 h-2 mt-1 rounded-full bg-[#38C29B]" />
                   </span>
                   <span>87 Some Address</span>
                   <span>→</span>
                   <span>
-                    <div className="w-2 h-2 rounded-full bg-[#4F45E4]" />
+                    <div className="w-2 h-2 mt-1 rounded-full bg-[#4F45E4]" />
                   </span>
                   <span>15 Some Address</span>
                 </div>
