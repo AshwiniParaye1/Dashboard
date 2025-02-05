@@ -58,6 +58,7 @@ export function ShipmentAnalytics() {
                 alt="Analytics Truck"
                 width={120}
                 height={80}
+                className="scale-x-[-1]"
               />
             </div>
             <div className="flex gap-4 pl-4  rounded-lg bg-[#F7F9FB]">
@@ -89,6 +90,7 @@ export function ShipmentAnalytics() {
                 alt="Analytics Truck"
                 width={120}
                 height={80}
+                className="scale-x-[-1]"
               />
             </div>
           </div>
