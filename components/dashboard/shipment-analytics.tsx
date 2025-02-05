@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SlidersHorizontal } from "lucide-react";
+import { HiArrowLongRight } from "react-icons/hi2";
 
 export function ShipmentAnalytics() {
   return (
@@ -43,7 +44,9 @@ export function ShipmentAnalytics() {
                     <div className="w-2 h-2 mt-1 rounded-full bg-[#38C29B]" />
                   </span>
                   <span>87 Some Address</span>
-                  <span>→</span>
+                  <span>
+                    <HiArrowLongRight size={24} />
+                  </span>
                   <span>
                     <div className="w-2 h-2 mt-1 rounded-full bg-[#4F45E4]" />
                   </span>
@@ -72,7 +75,9 @@ export function ShipmentAnalytics() {
                     <div className="w-2 h-2 mt-1 rounded-full bg-[#38C29B]" />
                   </span>
                   <span>87 Some Address</span>
-                  <span>→</span>
+                  <span>
+                    <HiArrowLongRight size={24} />
+                  </span>
                   <span>
                     <div className="w-2 h-2 mt-1 rounded-full bg-[#4F45E4]" />
                   </span>
